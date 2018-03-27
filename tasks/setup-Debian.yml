@@ -1,4 +1,12 @@
 ---
+
+- name: Add PPA repository
+  apt_repository:
+    repo: '{{ php_ppa_repo }}'
+    state: present
+    update_cache: yes
+  when: php_ppa_repo != ""
+
 - name: Update apt cache.
   apt: update_cache=yes cache_valid_time=86400
 

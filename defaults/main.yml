@@ -3,6 +3,11 @@
 # for RHEL/CentOS.
 php_enablerepo: ""
 
+# Pass repos to use (e.g. "ppa:ondrej/php"). Used only
+# for ubuntu
+php_ppa_repo: ""
+php_version_debian: 7.0
+
 # PHP package state; use 'installed' to make sure it's installed, or 'latest' if
 # you want to upgrade or switch versions using a new repo.
 php_packages_state: installed
